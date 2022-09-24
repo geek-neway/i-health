@@ -1,5 +1,3 @@
-
-
 ## 启动基础服务
 
 mysql、redis、rabbitmq
@@ -9,7 +7,7 @@ mysql、redis、rabbitmq
 rabbitmq默认账号密码：guest/guest
 mysql默认账号密码：root/root123
 
-## 启动devops组件，如elasticsearch、zipkin、skywalking、kibana、grafana
+## 启动 devops 组件，如 elasticsearch、zipkin、skywalking、kibana、grafana
 
 `docker-compose -f docker-compose.yml -f docker-compose.devops.yml up`
 
@@ -19,12 +17,12 @@ mysql默认账号密码：root/root123
 
 默认账号密码：nacos/nacos
 
-## 启动监控类服务，如springboot-admin、sentinel-dashboard
+## 启动监控类服务，如 springboot-admin、sentinel-dashboard
 
 `docker-compose -f docker-compose.yml -f docker-compose.monitor.yml up`
 
 默认账号密码：sentinel/sentinel
 
-## 启动MOSS
+## 启动 MOSS
 
 `docker-compose -f docker-compose.yml -f docker-compose.moss.yml up moss`

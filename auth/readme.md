@@ -7,7 +7,7 @@
 
 ## 简介
 
-本子项目采用spring-security和spring-security-oauth2实现授权与认证微服务，可供gateway实现微服务对外权限的动态管理与控制
+本子项目采用 spring-security 和 spring-security-oauth2 实现授权与认证微服务，可供 gateway 实现微服务对外权限的动态管理与控制
 
 | 服务名                     |   简介         |  默认地址                |
 |---------------------------|----------------|-------------------------|
@@ -22,9 +22,9 @@
 
 ![网关架构](../docs/auth.png)
 
-### OAuth2简介:
+### OAuth2 简介:
 
-#### OAuth2的4种模式
+#### OAuth2 的 4 种模式
 
 客户端必须得到用户的授权（authorization grant），才能获得令牌（access token）。OAuth 2.0定义了四种授权方式。
 
@@ -80,7 +80,7 @@ Token基本内容如下
 +-----------+                                     +-------------+
 ```
 
-### Spring OAuth2 + JWT Token简介
+### Spring OAuth2 + JWT Token 简介
 
 #### 本例中Spring OAuth2中Token结构简介
 
