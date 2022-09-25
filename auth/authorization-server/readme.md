@@ -3,7 +3,7 @@
 
 ## 简介
 
-授权微服务，可供网关gateway实现微服务对外权限的授予
+授权微服务，可供网关 gateway 实现微服务对外权限的授予
 
 ## 启动
 
@@ -39,7 +39,7 @@ password: `password`
 
 ### JWT Token介绍
 
-本例中access_token Payload 负载（中间部分）base64解码后结构如下
+本例中 access_token Payload 负载（中间部分）base64 解码后结构如下
 
 ```
 {
@@ -61,7 +61,7 @@ password: `password`
 
 #### 密码模式，grant_type=password
 
-用途：可用于用户通过前端应用登陆、使用应用，如app，web等终端
+用途：可用于用户通过前端应用登陆、使用应用，如 app，web 等终端
 
 ![postman](../../docs/auth/oauth2_password_token_auth.png)
 
@@ -94,7 +94,7 @@ username=zhoutaoo&password=password
 
 #### 客户端模式，grant_type=client_credentials
 
-用途：可用于接口开放给第三方商户，商户申请client_id和密码，即可调用授权的接口
+用途：可用于接口开放给第三方商户，商户申请 client_id 和密码，即可调用授权的接口
 
 ![postman](../../docs/auth/oauth2_client_token.png)
 
@@ -122,7 +122,7 @@ Cache-Control: no-cache
 
 #### 授权码模式，grant_type=authorization_code
 
-用途：可用开放平台账户给第三方商户，商户申请client_id和密码请求用户授权，用户授权商户即可调用平台授权的接口获取数据，类似微信、支付宝授权登陆
+用途：可用开放平台账户给第三方商户，商户申请 client_id 和密码请求用户授权，用户授权商户即可调用平台授权的接口获取数据，类似微信、支付宝授权登陆
 
 **第一步：用户登陆授权陆**
 
@@ -144,12 +144,12 @@ redirect_uri： 该参数要与商户申请client_id时登记的url(oauth_client
 
 ![postman](../../docs/auth/oauth2_authorization_code_authorization.png)
 
-4. 用户同意授权后，浏览器自动重定向至redirect_uri并带上code和state参数
+4. 用户同意授权后，浏览器自动重定向至 redirect_uri 并带上 code 和 state 参数
 
 ![postman](../../docs/auth/oauth2_authorization_code_url.png)
 
 
-**第二步：根据url上带的code获取用户的access_token**
+**第二步：根据 url 上带的 code 获取用户的 access_token **
 
 ![postman](../../docs/auth/oauth2_authorization_code.png)
 
@@ -174,9 +174,9 @@ Cache-Control: no-cache
 }
 ```
 
-#### 刷新access_token
+#### 刷新 access_token
 
-用途：使用refresh_token更新access_token
+用途：使用 refresh_token 更新 access_token
 
 ![postman](../../docs/auth/oauth2_refresh_token.png)
 
@@ -235,9 +235,9 @@ username=15619841xxxx&password=123456&client_id=test_client&client_secret=test_s
 
 ### 开发指南
 
-#### token自定义
+#### token 自定义
 
-见CustomTokenEnhancer类
+见 CustomTokenEnhancer 类
 
 ```
 public class CustomTokenEnhancer implements TokenEnhancer {
@@ -253,11 +253,11 @@ public class CustomTokenEnhancer implements TokenEnhancer {
 }
 ```
 
-#### jwt使用
+#### jwt 使用
 
-* jwt配置
+* jwt 配置
 
-见AuthenticationServerConfig类，本例中jwt使用对称加密算法，
+见 AuthenticationServerConfig 类，本例中 jwt 使用对称加密算法，
 也可使用非对称，这里不做实现，如有需要，请自行研究。
 
 ``` 
@@ -269,7 +269,7 @@ public JwtAccessTokenConverter accessTokenConverter() {
 }
 ```
 
-* jwt对称密钥配置项
+* jwt 对称密钥配置项
 
 ```
 spring:
